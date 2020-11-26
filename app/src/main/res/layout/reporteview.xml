@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="12dp">
+
+    <EditText
+        android:id="@+id/repSitu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Situacion: "/>
+    <EditText
+        android:id="@+id/desSitu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción: "
+        android:inputType="textAutoComplete"
+        />
+    <EditText
+        android:id="@+id/desNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Afectado/Denunciante: "
+        android:inputType="textAutoComplete"
+        />
+    <EditText
+        android:id="@+id/desCorre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo: "
+        android:inputType="textEmailAddress"
+        />
+
+</LinearLayout>

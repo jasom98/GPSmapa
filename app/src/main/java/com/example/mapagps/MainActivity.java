@@ -22,6 +22,8 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView miDir;
 
     private LocationManager ubicacion;
+    private Location loc;
+    private FusedLocationProviderClient mFusedLocationClient;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         nm = (Button) findViewById(R.id.btnMap);
         LOngitud = (TextView) findViewById(R.id.verLon);
         miDir = (TextView) findViewById(R.id.verDirecccion);
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
 
         int permiso = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION);
@@ -62,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 LocationListener locationListener = new LocationListener() {
                     @Override
                     public void onLocationChanged(@NonNull Location location) {
-
 
                     }
                 };
